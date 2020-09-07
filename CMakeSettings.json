@@ -2,7 +2,7 @@
   "environments": [
     {
       "BuildDir": "${env.USERPROFILE}\\vs2019",
-      "projectname":  "mdspan-msvc2019",
+      "projectname": "mdspan-msvc2019",
       "install_subdir": "install/d"
     }
   ],
@@ -17,7 +17,7 @@
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-verbosity:minimal -m:${env.NUMBER_OF_PROCESSORS}",
       "ctestCommandArgs": "-j ${env.NUMBER_OF_PROCESSORS} --output-on-failure",
-      "cmakeToolchain": "C:/work/vendors64/vs2019-toolchain.cmake",
+      "cmakeToolchain": "",
       "variables": [],
       "cmakeExecutable": "C:/Program Files/CMake/bin/cmake.exe"
     },
@@ -31,37 +31,8 @@
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-verbosity:minimal -m:${env.NUMBER_OF_PROCESSORS}",
       "ctestCommandArgs": "-j ${env.NUMBER_OF_PROCESSORS} --output-on-failure",
-      "cmakeToolchain": "C:/work/vendors64/vs2019-toolchain.cmake",
+      "cmakeToolchain": "",
       "inheritEnvironments": [ "msvc_x64_x64" ],
-      "variables": []
-    },
-    {
-      "name": "x64-Debug-scalar",
-      "generator": "Visual Studio 16 2019 Win64",
-      "configurationType": "Debug",
-      "buildRoot": "${env.BuildDir}/${name}/${env.projectname}",
-      "installRoot": "${env.BuildDir}/${name}/${env.install_subdir}",
-      "cmakeExecutable": "C:/Program Files/CMake/bin/cmake.exe",
-      "cmakeCommandArgs": "-DDRACO_C4=SCALAR",
-      "buildCommandArgs": "-verbosity:minimal -m:${env.NUMBER_OF_PROCESSORS}",
-      "ctestCommandArgs": "-j ${env.NUMBER_OF_PROCESSORS} --output-on-failure",
-      "cmakeToolchain": "C:/work/vendors64/vs2019-toolchain.cmake",
-      "inheritEnvironments": [ "msvc_x64_x64" ],
-      "variables": []
-    },
-    {
-      "name": "x64-Clang-Debug",
-      "generator": "Visual Studio 16 2019 Win64",
-      "configurationType": "Debug",
-      "buildRoot": "${env.BuildDir}/${name}/${env.projectname}",
-      "installRoot": "${env.BuildDir}/${name}/${env.install_subdir}",
-      "cmakeExecutable": "C:/Program Files/CMake/bin/cmake.exe",
-      "cmakeCommandArgs": "-DCMAKE_C_COMPILER:FILEPATH=\"C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO/2019/PREVIEW/VC/Tools/Llvm/x64/bin/clang-cl.exe\"",
-      "buildCommandArgs": "-v:m -m:${env.NUMBER_OF_PROCESSORS} ",
-      "ctestCommandArgs": "-j ${env.NUMBER_OF_PROCESSORS} --output-on-failure",
-      "cmakeToolchain": "C:/work/vendors64/vs2019-toolchain.cmake",
-      "inheritEnvironments": [ "clang_cl_x64_x64" ],
-      "intelliSenseMode": "windows-clang-x64",
       "variables": []
     }
   ]
