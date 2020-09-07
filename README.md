@@ -7,6 +7,7 @@ Microsoft Visual Studio Community 2019 Preview
 Version 16.8.0 Preview 2.1
 ```
   * [mdspan](https::/github.com/kokkos/mdspan) hash 371250b2341e6196b823337e4ea4d3474c879310
+    * I added an `#ifdef old_msvc` to `traits_backports.hpp` to elminate some build errors related to duplicate symbols.
 
 
 ### Reproducer

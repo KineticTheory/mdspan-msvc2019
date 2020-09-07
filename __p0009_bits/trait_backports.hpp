@@ -61,8 +61,6 @@ namespace std {
 #define _MDSPAN_BACKPORT_TRAIT(TRAIT) \
   template <class... Args> _MDSPAN_INLINE_VARIABLE constexpr auto TRAIT##_v = TRAIT<Args...>::value;
 
-#ifdef old_msvc
-
 _MDSPAN_BACKPORT_TRAIT(is_assignable)
 _MDSPAN_BACKPORT_TRAIT(is_constructible)
 _MDSPAN_BACKPORT_TRAIT(is_convertible)
@@ -71,8 +69,6 @@ _MDSPAN_BACKPORT_TRAIT(is_trivially_destructible)
 _MDSPAN_BACKPORT_TRAIT(is_same)
 _MDSPAN_BACKPORT_TRAIT(is_empty)
 _MDSPAN_BACKPORT_TRAIT(is_void)
-
-#endif
 
 #undef _MDSPAN_BACKPORT_TRAIT
 
